@@ -38,6 +38,9 @@
 ;;неверно перекодируется русский
 ;;текст
 
+(setq mouse-wheel-progressive-speed nil);;убираем ускорение прокрутки при ускорении 
+                                        ;;кручения колесика
+
 (setq default-input-method "russian-computer")
 
 ;;умный режим автозаполнения
@@ -55,9 +58,10 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (when (fboundp 'winner-mode)
       (winner-mode 1))
+(windmove-default-keybindings 'meta) ;; Alt+direction
 
 ;; ido
-(ido-mode 'buffer)
+(ido-mode 'all)
 (setq ido-enable-regexp nil)
 (setq ido-enable-flex-matching t) ;; enable fuzzy matching
 

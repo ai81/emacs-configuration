@@ -129,7 +129,7 @@ ido-mode is like magic pixie dust!
 #+begin_src emacs-lisp 
   (set-default 'indent-tabs-mode nil)
   (set-default 'indicate-empty-lines t)
-  (set-default 'imenu-auto-rescan t)
+  (set-default 'imenu-auto-rescan nil) ;; AI: was t - try to speed up
   
   (add-hook 'text-mode-hook 'turn-on-auto-fill)
   (add-hook 'text-mode-hook 'turn-on-flyspell)

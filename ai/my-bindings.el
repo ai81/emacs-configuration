@@ -27,4 +27,5 @@
 (global-set-key (kbd "C-q") ' undo)
 (global-set-key (kbd "C-z") 'quoted-insert)
 
-(global-set-key (kbd "M-SPC") 'toggle-input-method)
+(global-set-key [f11] '(lambda ()  (interactive) (revert-buffer-with-coding-system 'koi8-r)))
+(global-set-key [shift f11] '(lambda ()  (interactive) (revert-buffer-with-coding-system 'utf8)))

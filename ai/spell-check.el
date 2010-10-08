@@ -1,3 +1,4 @@
+(setq dict-servers '("localhost"))
 (require 'dict)
 (setq dict-buffer-coding-system 'utf-8)
 (global-set-key "\C-cdd" 'dict)
