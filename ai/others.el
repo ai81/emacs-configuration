@@ -33,6 +33,7 @@
 
 (require 'grep)
 (add-to-list 'grep-files-aliases '("a" . "*[CcHhxp]"));;синоним для ускорения rgrep
+(global-set-key [f2] 'rgrep)
 
 (setq tramp-default-method "scp");;так как в локальном режиме(ssh) 
 ;;неверно перекодируется русский

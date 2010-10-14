@@ -56,7 +56,7 @@ will load the =railscasts= color theme when Emacs starts.
       delete-by-moving-to-trash t
       shift-select-mode nil
       truncate-partial-width-windows nil
-      uniquify-buffer-name-style 'forward
+  ;;    uniquify-buffer-name-style 'forward  ;; conflict with projects package
       whitespace-style '(trailing lines space-before-tab
                                   indentation space-after-tab)
       whitespace-line-column 100

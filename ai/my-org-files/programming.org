@@ -1,0 +1,10 @@
+* to read/to see/to think
+** TODO Texinfo
+   [[http:http://www.gnu.org/software/texinfo/manual/texinfo/texinfo.html][main documentation]]
+** TODO LaTeX
+   [[http://svn.gna.org/viewcvs/*checkout*/latexrefman/trunk/latex2e.html][latex documentation]]
+** TODO gdb
+   [[http://www.gnu.org/software/gdb/documentation/][gdb documentation]]
+** TODO настройка ecb/symantec
+   [[info:cedet:Top][info documentation]]
+    

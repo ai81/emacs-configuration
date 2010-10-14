@@ -1,0 +1,36 @@
+#+TITLE:     priorities for Unix team
+#+AUTHOR:    Anton Ivanov
+#+EMAIL:     ai@drweb.com
+#+DATE:      2010-10-13 Срд
+#+DESCRIPTION: 
+#+KEYWORDS: 
+#+LANGUAGE:  en
+#+OPTIONS:   H:2 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:tb
+#+OPTIONS:   TeX:t LaTeX:t skip:nil d:nil todo:t pri:nil tags:not-in-toc
+#+INFOJS_OPT: view:nil toc:nil ltoc:t mouse:underline buttons:0 path:http://orgmode.org/org-info.js
+#+EXPORT_SELECT_TAGS: export
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+LINK_UP:   
+#+LINK_HOME: 
+#+XSLT: 
+
+Viam supervadet vadens
+
+-----
+* Office Shield 6.0.1 ([[http://bugs.drweb.com/bug_view_advanced_page.php?bug_id=0046670][46670]])
+* Dr.Web NSS [fn:1] ([[http://bugs.drweb.com/bug_view_advanced_page.php?bug_id=0045773][45773]])
+* разработка maildesk - второй этап [fn:1] [[http://bugs.drweb.com/bug_view_advanced_page.php?bug_id=0044133][(44133)]]
+* подготовка версии 6.0 серверных решений: maild ([[http://bugs.drweb.com/bug_view_advanced_page.php?bug_id=0044996][44996]]), icapd ([[http://bugs.drweb.com/bug_view_advanced_page.php?bug_id=0039763][39763]]), samba ([[http://bugs.drweb.com/bug_view_advanced_page.php?bug_id=0044983][44983]]).
+**  улучшение документации в рамках подготовки 6.0
+** выпуск пакетов для linux, freebsd и solaris версии 6.0
+** упрощение веб-интерфейсов (взять из OfficeShield)
+** интеграция веб-интерфейса из MailDesk (по мере наличия ресурсов)
+* Доработка версии Антивирус для Linux,включая
+** создание версии продукта для серверов
+** проверка всей файловой системы, а не только домашнего каталога
+
+* параллельно:
+** интеграция всех серверных продуктов с ES
+
+[fn:1] - разрабатываются параллельно
+

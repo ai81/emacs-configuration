@@ -50,7 +50,8 @@ back, =C-M-u= up, =C-M-d= down)
 (add-hook 'emacs-lisp-mode-hook 'run-coding-hook)
 (add-hook 'emacs-lisp-mode-hook 'esk-remove-elc-on-save)
 ;; (add-hook 'emacs-lisp-mode-hook 'idle-highlight)
-(add-hook 'emacs-lisp-mode-hook 'turn-on-paredit)
+;;(add-hook 'emacs-lisp-mode-hook 'turn-on-paredit);; i don't understand
+;; this mode
 
 (defun esk-remove-elc-on-save ()
   "If you're saving an elisp file, likely the .elc is no longer valid."
@@ -122,7 +123,8 @@ Only works with files in your project root's src/, not in dependencies."
   '(add-to-list 'ffip-patterns "*.clj"))
 
 ;; You might like this, but it's a bit disorienting at first:
-(add-hook 'clojure-mode-hook 'turn-on-paredit)
+;;(add-hook 'clojure-mode-hook 'turn-on-paredit);; i don't understand
+;; this mode
 
 (defun clojure-project (path)
   "Setup classpaths for a clojure project and starts a new SLIME session.
@@ -177,7 +179,8 @@ pretty \lambda's in clojure
 #+begin_src emacs-lisp
 (add-hook 'lisp-mode-hook 'run-coding-hook)
 ;; (add-hook 'lisp-mode-hook 'idle-highlight)
-(add-hook 'lisp-mode-hook 'turn-on-paredit)
+;;(add-hook 'lisp-mode-hook 'turn-on-paredit);; i don't understand
+;; this mode
 (font-lock-add-keywords 'lisp-mode
 			'(("(\\|)" . 'esk-paren-face)))
 #+end_src

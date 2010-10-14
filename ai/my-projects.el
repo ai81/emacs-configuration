@@ -1,5 +1,5 @@
 (require 'projects)
-(setq buffer-name-directory-limit 40)
+(setq project-buffer-name-directory-limit 40)
 (setq project-root-alist '(
                            ("icapd" . "~/icapd/drweb-icapd")
                            ("icapd-4.44" . "~/icapd/icapd-4-44-branch")
@@ -52,7 +52,7 @@
         (src-patterns     ("*.H" "*.C" "*.h" "*.c" "*.cxx" "*.cpp" "*.hpp" "*.hh"))
         (ignore-patterns  ("*cvs*" "*.png" "*.map" "*.md5" "*.html" "*~" 
                             "*.Po" "*.Tpo" "*.supp" "ChangeLog" "*.o" "files"
-                            "*.a" "drweb-nss"
+                            "*.a" "drweb-nss"  "drweb-nss-qcontrol"
                             "Entries" "Makefile" "Makefile.in" "config.status"
                             "configure"))
         (tags-file        "/home/ai/nss/drweb-nss/TAGS")
