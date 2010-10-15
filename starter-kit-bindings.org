@@ -90,7 +90,7 @@ Key Bindings.
 
 ** Fetch the contents at a URL, display it raw.
 #+begin_src emacs-lisp 
-(global-set-key (kbd "C-x h") 'view-url)
+;;(global-set-key (kbd "C-x h") 'view-url) - i want to select all buffer
 #+end_src
 
 ** Help should search more than just commands

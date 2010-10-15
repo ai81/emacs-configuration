@@ -1,6 +1,13 @@
-* TODO check dmitry ssl check<2010-10-14 Чтв 16:18>
+* DONE timeplans for boss <2010-10-15 15:00>
+  CLOSED: [2010-10-15 Птн 09:15]
+* DONE check dmitry ssl check<2010-10-14 Чтв 16:18>
+  CLOSED: [2010-10-15 Птн 11:52]
 * TODO проверка интерфейсов для агента/монитора/демона/апдейтера
 * TODO create report <2010-10-15 Чтв 16:00 +1w>
+* DONE check docs progress <2010-10-15 Птн 11:00>
+  CLOSED: [2010-10-15 Птн 11:53]
+* DONE check packages progress <2010-10-15 Птн 11:12>
+  CLOSED: [2010-10-15 Птн 11:53]
 
 * knowledges
 ** Сборка на freebsd72
