@@ -2,6 +2,35 @@
 ;; (setq c-macro-cppflags (concat "-DHAVE_CONFIG_H -I. -I/usr/local/include -I" 
 ;;                                 stl-base-dir ) )
 
+
+(defun upward-find-file (filename &optional startdir)
+  "Move up directories until we find a certain filename. If we
+  manage to find it, return the containing directory. Else if we
+  get to the toplevel directory and still can't find it, return
+  nil. Start at startdir or . if startdir not given"
+
+  (let ((dirname (expand-file-name
+		  (if startdir startdir ".")))
+	(found nil) ; found is set as a flag to leave loop if we find it
+	(top nil))  ; top is set when we get
+		    ; to / so that we only check it once
+
+    ; While we've neither been at the top last time nor have we found
+    ; the file.
+    (while (not (or found top))
+      ; If we're at / set top flag.
+      (if (string= (expand-file-name dirname) "/")
+	  (setq top t))
+      
+      ; Check for the file
+      (if (file-exists-p (expand-file-name filename dirname))
+	  (setq found t)
+	; If not, move up a directory
+	(setq dirname (expand-file-name ".." dirname))))
+    ; return statement
+    (if found dirname nil)))
+
+
 ;; Helper for compilation. Close the compilation window if
 ;; there was no error at all.
 (setq compilation-finish-functions 'compile-autoclose)
@@ -9,17 +38,11 @@
   (cond ((and 
           (string-match "finished" string) 
           (not (string-match "*grep*" (buffer-name (get-buffer buffer)))))
-         (message "Build maybe successful: closing window...")
-         ;; then bury the *compilation* buffer, so that C-x b doesn't go there
-         (bury-buffer)
-         ;; and delete the *compilation* window
-         (delete-window (get-buffer-window buffer))
-         ;; (run-with-timer 5 nil                      
-         ;;                 'delete-window              
-         ;;                 (get-buffer-window buffer t))
-         )
-        (t
-         (message "Compilation exited abnormally!"))))
+         (bury-buffer "*compilation*")
+         (winner-undo)
+         (message "Build successful."))
+        (t                                                                    
+         (message "Compilation exited abnormally: %s" string))))
 
 ;;функция сохраняет содержимое всех буферов
 ;;и затем вызывает make из католога где находится текущий файл
@@ -27,8 +50,8 @@
   "Save all files and compile"
     (interactive)
     (save-some-buffers 1)
-    (let (temp)
-      (compile "make -k -j8")
+    (let ((default-directory (or (upward-find-file "Makefile") ".")))
+      (compile (format "cd %s && make -k -j8" default-directory))
       )
   )
 
@@ -37,8 +60,8 @@
   "Save all files and compile"
     (interactive)
     (save-some-buffers 1)
-    (let (temp)
-      (compile "make -k -j8 check")
+    (let ((default-directory (or (upward-find-file "Makefile") ".")))
+      (compile (format "cd %s && make -k -j8 check" default-directory))
       )
   )
 
@@ -73,7 +96,6 @@
   ;; включить режимы auto-newline и hungry-delete
   (c-toggle-auto-hungry-state 1)
   (flyspell-prog-mode);;включаем проверку правописания в комментариях и строках 
-                        ;;- TEMP надо добавить выбор языка в зависимости от слова
   (ispell-change-dictionary "american")
   ;;<RET> работает как C-j  
   (define-key c-mode-base-map "\C-m" 'c-context-line-break)

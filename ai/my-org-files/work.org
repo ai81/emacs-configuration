@@ -3,12 +3,29 @@
 * DONE check dmitry ssl check<2010-10-14 Чтв 16:18>
   CLOSED: [2010-10-15 Птн 11:52]
 * TODO проверка интерфейсов для агента/монитора/демона/апдейтера
-* TODO create report <2010-10-15 Чтв 16:00 +1w>
+* TODO create report <2010-10-29 Птн 16:00 +1w>
+  - State "DONE"       from "TODO"       [2010-10-22 Птн 19:05]
+  - State "DONE"       from "TODO"       [2010-10-17 Вс. 00:14]
+  :PROPERTIES:
+  :LAST_REPEAT: [2010-10-22 Птн 19:05]
+  :END:
 * DONE check docs progress <2010-10-15 Птн 11:00>
   CLOSED: [2010-10-15 Птн 11:53]
 * DONE check packages progress <2010-10-15 Птн 11:12>
   CLOSED: [2010-10-15 Птн 11:53]
 
+* DONE talk with boss about money <2010-10-27 Пнд>
+  CLOSED: [2010-10-27 Срд 13:16]
+* DONE поговорить по поводу документации на livecd <2010-12-07 Втр>  
+  CLOSED: [2010-12-07 Втр 14:02]
+* DONE обсудить планы по интерфейсам и агенту <2010-12-07 Втр>
+  CLOSED: [2010-12-07 Втр 14:02]
+* DONE обсудить готовность mac <2010-12-07 Втр>
+  CLOSED: [2010-12-07 Втр 11:22]
+* DONE собрание тестеров <2010-12-07 Втр 15:00>
+  CLOSED: [2010-12-07 Втр 15:27]
+* DONE поговорить с матюговым <2010-12-17 Птн>
+  CLOSED: [2010-12-17 Птн 14:01]
 * knowledges
 ** Сборка на freebsd72
 gmake LDFLAGS='-L /home/al/slaves/freebsd72/drweb-maild_5.0.0_drweb_x86_freebsd/build/additional/lib/ -Wl,-rpath-link,/home/al/slaves/freebsd72/drweb-maild_5.0.0_drweb_x86_freebsd/build/additional/lib/' CXXFLAGS='-I/home/al/slaves/freebsd72/drweb-maild_5.0.0_drweb_x86_freebsd/build/additional/include'

@@ -19,14 +19,6 @@
 ;; * This enables even more coding tools such as intellisense mode
 ;;   decoration mode, and stickyfunc mode (plus regular code helpers)
 (semantic-load-enable-gaudy-code-helpers)
-;; add for emacs 23.2
-;; (setq semantic-default-submodes 
-;; '(global-semantic-idle-scheduler-mode 
-;;   global-semanticdb-minor-mode
-;;   global-semantic-decoration-mode
-;;   global-semantic-highlight-func-mode
-;;   global-semantic-stickyfunc-mode
-;;   global-semantic-mru-bookmark-mode))
 
 ;; complitition stuff
 (require 'semantic-ia)
@@ -47,48 +39,45 @@
 ;; ;;(require 'ecb-autoloads)
 
 (setq maild-base-dir "/home/ai/DevelMail/drweb-maild")
-
-( ede-cpp-root-project 
-  "maild"
-  :name "MailD Project (head)"
-  :version "6.0"
-  :file (concat maild-base-dir "/configure.in" )
-  :include-path '("/"
-                  "/shared"
-                  "/Engine/plugins"
-                  "/Filters/shared"
-                  "/mimepp"
-                  )
-  :spp-table '(("HAVE_CONFIG_H" . "1")
-               )
+(when (file-accessible-directory-p maild-base-dir)
+  ( ede-cpp-root-project 
+    "maild"
+    :name "MailD Project (head)"
+    :version "6.0"
+    :file (concat maild-base-dir "/configure.in" )
+    :include-path '("/"
+                    "/shared"
+                    "/Engine/plugins"
+                    "/Filters/shared"
+                    "/mimepp"
+                    )
+    :spp-table '(("HAVE_CONFIG_H" . "1")
+                 )
+    :spp-files '( "mainconfig.h" )
+    )
   )
 
 
 (setq nss-base-dir "/home/ai/nss/drweb-nss")
-
-( ede-cpp-root-project 
-  "nss"
-  :name "Dr.Web NSS project (head)"
-  :version "6.0"
-  :file (concat nss-base-dir "/configure.ac" )
-  :include-path '("/"
-                  "/maild"
-                  "/key"
-                  "/src"
-                  "/src/maild"
-                  "/src/key"
-                  )
-  :spp-table '(("HAVE_CONFIG_H" . "1")
-               )
+(when (file-accessible-directory-p nss-base-dir)
+  ( ede-cpp-root-project 
+    "nss"
+    :name "Dr.Web NSS project (head)"
+    :version "6.0"
+    :file (concat nss-base-dir "/configure.ac" )
+    :include-path '("/"
+                    "/maild"
+                    "/key"
+                    "/src"
+                    "/src/maild"
+                    "/src/key"
+                    )
+    :spp-table '(("HAVE_CONFIG_H" . "1")
+                 )
+    :spp-files '("mainconfig.h")
+    )
   )
 
-
-(add-to-list 'semantic-lex-c-preprocessor-symbol-file (concat maild-base-dir "/mainconfig.h")  (concat nss-base-dir "/mainconfig.h") )
-
-;; configuration for stl
-;; (add-to-list 'semantic-lex-c-preprocessor-symbol-file (concat stl-base-dir "/i586-suse-linux/bits/os_defines.h"))
-;; (add-to-list 'semantic-lex-c-preprocessor-symbol-file "/usr/include/features.h")
-;; (add-to-list 'semantic-lex-c-preprocessor-symbol-file (concat stl-base-dir "/i586-suse-linux/bits/c++config.h"))
 
 (defun semantic-ia-fast-jump-with-save-pos (point)
   "Save pos in tag ring to return to original pos by M-*"
@@ -125,3 +114,12 @@
 
 (global-set-key [f3] 'eassist-switch-h-cpp) ;;обмен C/H файлов
 
+(global-set-key (kbd "C-c , <up>") 'senator-transpose-tags-up)
+(global-set-key (kbd "C-c , <down>") 'senator-transpose-tags-down)
+(global-set-key '[(S-mouse-1)] 'semantic-ia-fast-mouse-jump)
+
+;; with ede-locate-locate VERY low speed 
+;;(setq ede-locate-setup-options '(ede-locate-locate ede-locate-base))
+
+;; i don't use speedbar...
+;;(require 'semantic/sb)

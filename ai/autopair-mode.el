@@ -23,6 +23,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;; only for rectangles
-(setq cua-enable-cua-keys nil) 
+(setq cua-enable-cua-keys nil)
+(setq cua-rectangle-mark-key [C-M-return])
 (cua-mode t)
 
