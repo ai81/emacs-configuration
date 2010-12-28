@@ -1,0 +1,84 @@
+BZR merge-modified list format 1
+file_id: xmtndvc.el-20070326192657-1hs1v8e7hcnkwk91-7
+hash: 3d0054eb0be88884329f0e6bd06acde8cd9ec659
+
+file_id: xmtnhooks.lua-20100911180102-213807m7xe7dguta-1
+hash: 1f09e79c7e7d37c4c69b3085f8180d832e8ad0b1
+
+file_id: dvcbuffers.el-20060607202431-e158a4aa929f70d9
+hash: 542aee9b167f83e825718caac198efb4252fda84
+
+file_id: bzrignore-20060701105852-er2escjfqktvi63g-1
+hash: 510118f79e475a1d3a31f92b6f1119e053e6e400
+
+file_id: xmtnsync.el-20100911180104-soh9s04akjn7yh6l-1
+hash: 7653ef44773829f160ec0f1151c0988e4206ea5a
+
+file_id: xmtnpropagate.el-20090831114303-vvmr17sptrqk4g2u-1
+hash: 4b6eabb8db83d8ac288d098a3f3da6b86077fd9b
+
+file_id: dvcdiff.el-20060607202432-4e481d3d488883d8
+hash: 152d6beb48b5f03de417edb0dd19e71fdbe048ae
+
+file_id: bzr.el-20060607202431-396291df0f2a15ec
+hash: 58962e1e3a94e6f11a6aaa065263ca5d8d8a5612
+
+file_id: Makefile.in-20060607202431-7820a283d1f2a36d
+hash: fe4a393b02ba01d901e29993892effe960168303
+
+file_id: tla.el-20060607202432-cb1c24722bd9074c
+hash: f39591622c1cad237ee0992a18eeb0a7dafce485
+
+file_id: dvccore.el-20060607202432-da72349b546e2115
+hash: 756060e514dd8a910db3fabe96a53ea1b807b5fa
+
+file_id: xmtnconflicts.el-20080830154422-ui26zy1pbdv24eh2-1
+hash: b3645ac29c052136751b28bd42f3440271f706ca
+
+file_id: xmtnbasicio.el-20070326192657-1hs1v8e7hcnkwk91-9
+hash: 0cef9aa50d1ee7ff1ce90546ae7183fcb1ad7f57
+
+file_id: dvcunified.el-20060607202432-97434bc621edb01e
+hash: a0b03807a25bbb2c865a9a78b69fa7e48f1896d9
+
+file_id: xmtnautomate.el-20070326192657-1hs1v8e7hcnkwk91-11
+hash: 706326c0ff00d39a861b810e583b14fb86cb6040
+
+file_id: Makefile.in-20060607202432-79fe29584d383280
+hash: b46bac203a73821761b9235d21e5502152ef3594
+
+file_id: dvcintro.texinfo-20100911180111-rfeh80ir1950dd8m-1
+hash: afd35484373e22a15133d38aa3e0ddccd10b4366
+
+file_id: tlacore.el-20060607202432-ccb6e9d4d79684ea
+hash: d7daffebe6ab64c621b83be93b0cf5102a99d130
+
+file_id: xhg.el-20060607202432-415d7e0bc75dcd99
+hash: 932aed5ef1d0a0831f84d855b64e79044a4527d2
+
+file_id: xmtnmultistatus.el-20091204123021-wt319yfvva6dexlm-1
+hash: 3377ce9621b0ed7d5b51c09de80ecc68504863d4
+
+file_id: xmtnids.el-20070326192657-1hs1v8e7hcnkwk91-6
+hash: bcd4632162faed9e95e35413b7aa301db952651d
+
+file_id: dvcfileinfo.el-20071122113305-plvd7ngtv9mpivrl-1
+hash: a7bf529690138430cb9ca6d918d6f7f4973ef828
+
+file_id: xmtnbase.el-20070326192657-1hs1v8e7hcnkwk91-10
+hash: b7352ac49430d5b45a377882e170cb411ad73bef
+
+file_id: configure.ac-20060607202431-b3d167ff79f1a16e
+hash: c8268ec6123951da7f4fdcc25007751318bc5451
+
+file_id: xmtnrevlist.el-20070326192657-1hs1v8e7hcnkwk91-3
+hash: 63641924eca63444abdcec04d035f99a19c7bb4b
+
+file_id: tlatests.el-20060607202432-d6d8b6f8b7e6b0bc
+hash: b521a84e5ec3796cf81f968f3dc9a1fc9930cc10
+
+file_id: fdl.texinfo-20100911180113-glzcb4999c9ek5ht-1
+hash: 451b2919d8fd59cdd23ae47317101fccbc5bd3b0
+
+file_id: xmtnrun.el-20070326192657-1hs1v8e7hcnkwk91-2
+hash: fc4cb090db161a2c7d414be51075b5f30b82613d
