@@ -69,7 +69,7 @@
 (defun my-ppp-comment-region (top bottom)
   ""
   (interactive "r")
-  (setq macro [home ?\M-m ?\C-q ?/ ?\C-q ?/ ? ])
+  (setq macro [home ?\M-m ?\C-z ?/ ?\C-z ?/ ? ])
 ;;  (apply-macro-to-region-lines top bottom macro
   (save-excursion
     (let ((end-marker (copy-marker bottom))
@@ -91,7 +91,9 @@
       (set-marker end-marker nil)
       (set-marker next-line-marker nil))))
 
-(setq c-default-style "gnu");;стиль выравнивания по умолчанию
+;;стиль выравнивания по умолчанию
+(setq c-default-style "gnu")
+
 (defun my-c-mode-common-hook ()
   ;; включить режимы auto-newline и hungry-delete
   (c-toggle-auto-hungry-state 1)

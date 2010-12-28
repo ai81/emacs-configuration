@@ -29,3 +29,19 @@
 
 (global-set-key [f11] '(lambda ()  (interactive) (revert-buffer-with-coding-system 'koi8-r)))
 (global-set-key [shift f11] '(lambda ()  (interactive) (revert-buffer-with-coding-system 'utf8)))
+
+
+
+(defun my-check-buffer (lang)
+  (ispell-change-dictionary lang)
+  (setq flyspell-generic-check-word-predicate 'flyspell-generic-progmode-verify)
+  (flyspell-buffer)
+  )
+
+;; check whole buffer with program for errors in English text
+;; (comments and strings)
+(global-set-key [f8] '(lambda () (interactive)(my-check-buffer "american")))
+
+;; check whole buffer with program for errors in Russian text
+;; (comments and strings)
+(global-set-key [shift f8] '(lambda () (interactive)(my-check-buffer "russian")))
