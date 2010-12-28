@@ -289,13 +289,40 @@ backport some functionality to Emacs 22 if needed
   (require 'dominating-file)
 #+end_src
 
-*** Function for loading starter-kit-*
+*** Function for loading/compiling starter-kit-*
 #+srcname: starter-kit-load
 #+begin_src emacs-lisp 
   (defun starter-kit-load (file)
     "This function is to be used to load starter-kit-*.org files."
     (org-babel-load-file (expand-file-name file
                                            dotfiles-dir)))
+#+end_src
+
+#+source: starter-kit-compile
+#+begin_src emacs-lisp
+  (defun starter-kit-compile (&optional arg)
+    "Tangle and Byte compile all starter-kit files."
+    (interactive "P")
+    (flet ((age (file)
+                (float-time
+                 (time-subtract (current-time)
+                                (nth 5 (or (file-attributes (file-truename file))
+                                           (file-attributes file)))))))
+      (mapc
+       (lambda (file)
+         (when (string= "org" (file-name-extension file))
+           (let ((el-file (concat (file-name-sans-extension file) ".el")))
+             (when (or arg
+                       (not (and (file-exists-p el-file)
+                                 (> (age file) (age el-file)))))
+               (org-babel-tangle-file file el-file "emacs-lisp")
+               (byte-compile-file el-file)))))
+       (apply #'append
+              (mapcar
+               (lambda (d)
+                 (when (and (file-exists-p d) (file-directory-p d))
+                   (mapcar (lambda (f) (expand-file-name f d)) (directory-files d))))
+               (list (concat dotfiles-dir user-login-name) dotfiles-dir))))))
 #+end_src
 
 *** ELPA (Emacs Lisp Package Manager)
@@ -305,17 +332,11 @@ Load up [[http://tromey.com/elpa/][ELPA]], the Emacs Lisp package manager
 #+srcname: starter-kit-elpa
 #+begin_src emacs-lisp 
   (require 'package)
+  (add-to-list 'package-archives '("original" . "http://tromey.com/elpa/"))
+  (add-to-list 'package-archives
+               '("technomancy" . "http://repo.technomancy.us/emacs/") t)
   (package-initialize)
   (starter-kit-load "starter-kit-elpa.org")
-#+end_src
-
-*** Starter Kit Customizations
-
-Load up starter kit customizations
-
-#+srcname: starter-kit-customizations
-#+begin_src emacs-lisp 
-  (load custom-file 'noerror)
 #+end_src
 
 *** Work around OS X bug
@@ -466,6 +487,13 @@ Located in [[file:starter-kit-perl.org][starter-kit-perl]]
 (starter-kit-load "starter-kit-perl.org")
 #+end_src
 
+*** Starter Kit Python
+Located in [[file:starter-kit-python.org][starter-kit-python]]
+
+#+begin_src emacs-lisp
+(starter-kit-load "starter-kit-python.org")
+#+end_src
+
 *** Starter Kit Latex
 Located in [[file:starter-kit-latex.org][starter-kit-latex]]
 
@@ -474,7 +502,13 @@ Located in [[file:starter-kit-latex.org][starter-kit-latex]]
 #+end_src
 
 ** Load User/System Specific Files
+*** Settings from M-x customize
+#+srcname: m-x-customize-customizations
+#+begin_src emacs-lisp 
+  (load custom-file 'noerror)
+#+end_src
 
+*** E-lisp customization
 After we've loaded all the Starter Kit defaults, lets load the User's stuff.
 #+srcname: starter-kit-load-files
 #+begin_src emacs-lisp

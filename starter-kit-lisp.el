@@ -120,12 +120,21 @@ Kills existing SLIME session, if any."
   (save-window-excursion
     (slime)))
 
+;; symbols for some overlong function names
 (eval-after-load 'clojure-mode
   '(font-lock-add-keywords
-    'clojure-mode `(("(\\(fn\\>\\)"
-                     (0 (progn (compose-region (match-beginning 1)
-                                               (match-end 1) "ƒ")
-                               nil))))))
+    'clojure-mode
+    (mapcar
+     (lambda (pair)
+       `(,(car pair)
+         (0 (progn (compose-region
+                    (match-beginning 0) (match-end 0)
+                    ,(cadr pair))
+                   nil))))
+     '(("\\<fn\\>" ?ƒ)
+       ("\\<comp\\>" ?∘)
+       ("\\<partial\\>" ?þ)
+       ("\\<complement\\>" ?¬)))))
 
 (add-hook 'scheme-mode-hook 'run-coding-hook)
 ;; (add-hook 'scheme-mode-hook 'idle-highlight)
