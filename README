@@ -1,5 +1,11 @@
-This is a Literate Programming fork of the original Emacs Starter Kit
-which is located at http://github.com/technomancy/emacs-starter-kit/
+This is my fork of this project Literate Programming fork of the
+original Emacs Starter Kit which is located at
+http://github.com/technomancy/emacs-starter-kit/.
+
+You may find resent code on
+https://github.com/ai81/emacs-configuration
+
+Part of original readme:
 
 This should provide a saner set of defaults than you get normally with
 Emacs. It's intended for beginners, but provides a good elisp
