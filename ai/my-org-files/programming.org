@@ -1,0 +1,13 @@
+* to read/to see/to think
+** DONE Texinfo
+   CLOSED: [2010-10-20 Срд 13:31]
+   [[http:http://www.gnu.org/software/texinfo/manual/texinfo/texinfo.html][main documentation]]
+** DONE LaTeX
+   CLOSED: [2010-10-20 Срд 13:33]
+   [[http://svn.gna.org/viewcvs/*checkout*/latexrefman/trunk/latex2e.html][latex documentation]]
+** TODO gdb
+   [[http://www.gnu.org/software/gdb/documentation/][gdb documentation]]
+** DONE настройка ecb/symantec
+   CLOSED: [2010-10-19 Втр 17:45]
+   [[info:cedet:Top][info documentation]]
+    
