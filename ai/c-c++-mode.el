@@ -187,7 +187,7 @@
 (defun my-insert-copyright ()
   (interactive)
   (insert "/*---------------------------------------------------------------------------\n"
-          " * Copyright 2010 Igor Daniloff.\n"
+          " * Copyright 2011 Igor Daniloff.\n"
           " * \n"
           " * Following source code is the property of Doctor Web, Ltd.\n"
           " * Use is subject to license terms.\n"
