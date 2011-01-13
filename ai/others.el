@@ -76,5 +76,4 @@
 (autoload 'get-rfc-view-rfc-at-point "get-rfc" "View the RFC at point" t nil)
 (autoload 'get-rfc-grep-rfc-index "get-rfc" "Grep rfc-index.txt" t nil)
 (setq get-rfc-local-rfc-directory "~/")
-(setq get-rfc-save-new-rfcs-locally nil)
-(setq get-rfc-rfcs-local-flag t)
+(setq get-rfc-save-new-rfcs-locally t)
