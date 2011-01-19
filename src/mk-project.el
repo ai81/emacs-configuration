@@ -579,8 +579,11 @@ With C-u prefix, start ack from the current directory."
   "Run the compile command for this project."
   (interactive "sCompile options: ")
   (mk-proj-assert-proj)
-  (project-home)
-  (compile (concat mk-proj-compile-cmd " " opts)))
+  (let ((old-dir default-directory))
+    (project-home)
+    (compile (concat mk-proj-compile-cmd " " opts))
+    (cd old-dir)
+  ))
 
 ;; ---------------------------------------------------------------------
 ;; Home and Dired
