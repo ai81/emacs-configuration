@@ -86,7 +86,7 @@ This *must* end in a trailing slash."
   :type 'string)
 
 (defcustom get-rfc-remote-rfc-index
-  "http://www.isi.edu/in-notes/rfc-index.txt"
+  "http://www.ietf.org/rfc/rfc-index"
   "*Where to find the file \"rfc-index.txt\" which lists all currently
 available RFCS.
 
@@ -175,7 +175,7 @@ Return the file it was saved in, so we can do
       (call-process get-rfc-wget-program nil nil nil
                     rfc-full (concat get-rfc-wget-output-flag tmp-file))
       (when get-rfc-save-new-rfcs-locally
-        (let ((file (concat get-rfc-local-rfc-directory rfc)))
+        (let ((file (concat get-rfc-local-rfc-directory (file-name-nondirectory rfc))))
           (unless (file-exists-p file)
             (copy-file tmp-file file))
           (setq tmp-file file)))
@@ -245,7 +245,7 @@ You may also specify where on the web to find RFCs by setting
                                (concat get-rfc-local-rfc-directory
                                        get-rfc-rfc-index)
                              (get-rfc
-                              get-rfc-remote-rfc-directory t)))))
+                              get-rfc-remote-rfc-index t)))))
   (grep grep-args)))
 
 (provide 'get-rfc)

@@ -77,3 +77,8 @@
 (autoload 'get-rfc-grep-rfc-index "get-rfc" "Grep rfc-index.txt" t nil)
 (setq get-rfc-local-rfc-directory "~/")
 (setq get-rfc-save-new-rfcs-locally t)
+(custom-set-variables
+ '(get-rfc-rfcs-local-flag nil)
+ '(get-rfc-remote-rfc-index "http://www.ietf.org/rfc/rfc-index")
+ )
+
