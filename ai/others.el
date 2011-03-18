@@ -82,3 +82,5 @@
  '(get-rfc-remote-rfc-index "http://www.ietf.org/rfc/rfc-index")
  )
 
+;; thrift
+(require 'thrift-mode)
