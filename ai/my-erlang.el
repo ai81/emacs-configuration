@@ -1,6 +1,21 @@
 
 (setq my-path-to-erlang-emacs "/usr/lib/erlang/lib/tools-2.6.6/emacs/")
 
+(defun my-erlang-include-dirs ()
+      (list
+       (concat (erlang-flymake-get-app-dir) "include")
+
+       ;; for apache thrift support
+       (concat (erlang-flymake-get-app-dir) "gen/include")
+       ))
+(defun my-erlang-code-dirs ()
+      (list
+       (concat (erlang-flymake-get-app-dir) "ebin")
+
+       ;; for apache thrift support
+       (concat (erlang-flymake-get-app-dir) "gen/ebin")
+       ))
+
 (if (file-directory-p my-path-to-erlang-emacs)
     (let (temp)
       (setq load-path (cons my-path-to-erlang-emacs load-path))
@@ -53,6 +68,8 @@
       ;; flymake for erlang
       (require 'erlang-flymake)
       (erlang-flymake-only-on-save)
+      (setq erlang-flymake-get-include-dirs-function 'my-erlang-include-dirs)
+      (setq erlang-flymake-get-code-path-dirs-function 'my-erlang-code-dirs)
       
       );; if erlang is present in system
   )
