@@ -51,7 +51,7 @@
     (interactive)
     (save-some-buffers 1)
     (let ((default-directory (or (upward-find-file "Makefile") ".")))
-      (compile (format "cd %s && make -k -j8" default-directory))
+      (compile (format "cd %s && make -k -j4" default-directory))
       )
   )
 
@@ -61,7 +61,7 @@
     (interactive)
     (save-some-buffers 1)
     (let ((default-directory (or (upward-find-file "Makefile") ".")))
-      (compile (format "cd %s && make -k -j8 check" default-directory))
+      (compile (format "cd %s && make -k -j4 check" default-directory))
       )
   )
 

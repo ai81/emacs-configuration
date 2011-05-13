@@ -22,6 +22,7 @@
       (setq erlang-root-dir "/usr/lib/erlang")
       (setq exec-path (cons "/usr/lib/erlang/bin" exec-path))
       (setq erlang-man-root-dir (concat erlang-root-dir "/man"))
+      (setq erlang-compile-extra-opts '((i . \"../gen/include\"))) ;; for thrift
       (require 'erlang-start)
       (defun my-erlang-mode-hook ()
         ;; when starting an Erlang shell in Emacs, default in the node name
