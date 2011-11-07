@@ -46,7 +46,7 @@
   (require 'dvc-utils))
 
 ;;;### (autoloads (baz-annotate baz-status-goto baz-branch) "baz"
-;;;;;;  "baz.el" (19408 7045))
+;;;;;;  "baz.el" (19737 46939))
 ;;; Generated autoloads from baz.el
 
 (defvar baz-tla-only-commands '(tla-tag) "\
@@ -92,7 +92,7 @@ annotated file's buffer. This allows you to run `baz-trace-line' and
 
 ;;;***
 
-;;;### (autoloads nil "baz-dvc" "baz-dvc.el" (19408 7045))
+;;;### (autoloads nil "baz-dvc" "baz-dvc.el" (19737 46939))
 ;;; Generated autoloads from baz-dvc.el
 
 (dvc-register-dvc 'baz "Bazaar 1")
@@ -105,7 +105,7 @@ annotated file's buffer. This allows you to run `baz-trace-line' and
 ;;;;;;  bzr-resolved bzr-dvc-rename bzr-dvc-remove-files bzr-dvc-revert-files
 ;;;;;;  bzr-dvc-add-files bzr-add bzr-inventory bzr-delta bzr-dvc-diff
 ;;;;;;  bzr-diff-against bzr-update bzr-merge bzr-push bzr-pull bzr-checkout)
-;;;;;;  "bzr" "bzr.el" (19736 24494))
+;;;;;;  "bzr" "bzr.el" (19737 46939))
 ;;; Generated autoloads from bzr.el
 
 (autoload 'bzr-checkout "bzr" "\
@@ -222,7 +222,7 @@ list of (PATH (EMAIL BRANCH-NICK (EXTRA-ARG ...)))")
 
 ;;;### (autoloads (bzr-default-global-argument bzr-prepare-environment
 ;;;;;;  bzr-tree-id bzr-branch-root bzr-tree-root) "bzr-core" "bzr-core.el"
-;;;;;;  (19408 7045))
+;;;;;;  (19737 46939))
 ;;; Generated autoloads from bzr-core.el
 
 (autoload 'bzr-tree-root "bzr-core" "\
@@ -263,7 +263,7 @@ Disable aliases.
 ;;;***
 
 ;;;### (autoloads (bzr-dvc-name-construct bzr-dvc-search-file-in-diff)
-;;;;;;  "bzr-dvc" "bzr-dvc.el" (19408 7045))
+;;;;;;  "bzr-dvc" "bzr-dvc.el" (19737 46939))
 ;;; Generated autoloads from bzr-dvc.el
 
 (dvc-register-dvc 'bzr "Bazaar 2")
@@ -304,8 +304,8 @@ Usually that file is placed in the tree-root of the working tree.")
 
 ;;;***
 
-;;;### (autoloads (bzr-insinuate-gnus) "bzr-gnus" "bzr-gnus.el" (19408
-;;;;;;  7045))
+;;;### (autoloads (bzr-insinuate-gnus) "bzr-gnus" "bzr-gnus.el" (19737
+;;;;;;  46939))
 ;;; Generated autoloads from bzr-gnus.el
 
 (autoload 'bzr-insinuate-gnus "bzr-gnus" "\
@@ -316,7 +316,7 @@ Integrate bzr into Gnus.
 ;;;***
 
 ;;;### (autoloads (bzr-dvc-missing bzr-changelog bzr-log-remote bzr-log)
-;;;;;;  "bzr-revision" "bzr-revision.el" (19408 7045))
+;;;;;;  "bzr-revision" "bzr-revision.el" (19737 46939))
 ;;; Generated autoloads from bzr-revision.el
 
 (autoload 'bzr-log "bzr-revision" "\
@@ -345,7 +345,7 @@ Run bzr missing.
 ;;;***
 
 ;;;### (autoloads (bzr-submit-patch bzr-prepare-patch-submission)
-;;;;;;  "bzr-submit" "bzr-submit.el" (19408 7045))
+;;;;;;  "bzr-submit" "bzr-submit.el" (19737 46939))
 ;;; Generated autoloads from bzr-submit.el
 
 (autoload 'bzr-prepare-patch-submission "bzr-submit" "\
@@ -379,7 +379,7 @@ After the user has sent the message, `bzr-submit-patch-done' is called.
 
 ;;;***
 
-;;;### (autoloads (dvc-about) "dvc-about" "dvc-about.el" (19408 7045))
+;;;### (autoloads (dvc-about) "dvc-about" "dvc-about.el" (19737 46939))
 ;;; Generated autoloads from dvc-about.el
 
 (autoload 'dvc-about "dvc-about" "\
@@ -390,8 +390,8 @@ Displays a welcome message.
 ;;;***
 
 ;;;### (autoloads (dvc-bookmarks-current-push-locations dvc-bookmarks-dired-add-project
-;;;;;;  dvc-bookmarks) "dvc-bookmarks" "dvc-bookmarks.el" (19408
-;;;;;;  7045))
+;;;;;;  dvc-bookmarks) "dvc-bookmarks" "dvc-bookmarks.el" (19737
+;;;;;;  46939))
 ;;; Generated autoloads from dvc-bookmarks.el
 
 (autoload 'dvc-bookmarks "dvc-bookmarks" "\
@@ -413,7 +413,7 @@ Not documented
 ;;;***
 
 ;;;### (autoloads (dvc-submit-bug-report) "dvc-bug" "dvc-bug.el"
-;;;;;;  (19408 7045))
+;;;;;;  (19737 46939))
 ;;; Generated autoloads from dvc-bug.el
 
 (autoload 'dvc-submit-bug-report "dvc-bug" "\
@@ -424,7 +424,7 @@ Submit a bug report, with pertinent information to the dvc-dev list.
 ;;;***
 
 ;;;### (autoloads (dvc-current-file-list) "dvc-core" "dvc-core.el"
-;;;;;;  (19736 24494))
+;;;;;;  (19737 46939))
 ;;; Generated autoloads from dvc-core.el
 
 (autoload 'dvc-current-file-list "dvc-core" "\
@@ -441,7 +441,7 @@ otherwise the result depends on SELECTION-MODE:
 
 ;;;***
 
-;;;### (autoloads nil "dvc-defs" "dvc-defs.el" (19408 7045))
+;;;### (autoloads nil "dvc-defs" "dvc-defs.el" (19737 46939))
 ;;; Generated autoloads from dvc-defs.el
 
 (defvar dvc-registered-backends nil "\
@@ -450,7 +450,7 @@ The list of registered dvc backends.")
 ;;;***
 
 ;;;### (autoloads (dvc-dvc-file-diff dvc-file-ediff) "dvc-diff" "dvc-diff.el"
-;;;;;;  (19736 24494))
+;;;;;;  (19737 46939))
 ;;; Generated autoloads from dvc-diff.el
 
 (autoload 'dvc-file-ediff "dvc-diff" "\
@@ -467,8 +467,8 @@ workspace version).
 
 ;;;***
 
-;;;### (autoloads (dvc-insinuate-gnus) "dvc-gnus" "dvc-gnus.el" (19408
-;;;;;;  7045))
+;;;### (autoloads (dvc-insinuate-gnus) "dvc-gnus" "dvc-gnus.el" (19737
+;;;;;;  46939))
 ;;; Generated autoloads from dvc-gnus.el
 
 (autoload 'dvc-insinuate-gnus "dvc-gnus" "\
@@ -489,7 +489,7 @@ K t p `dvc-gnus-article-apply-patch-with-selected-destination'
 ;;;***
 
 ;;;### (autoloads (dvc-add-log-entry dvc-dvc-log-edit dvc-log-edit-mode)
-;;;;;;  "dvc-log" "dvc-log.el" (19408 7045))
+;;;;;;  "dvc-log" "dvc-log.el" (19737 46939))
 ;;; Generated autoloads from dvc-log.el
 
 (autoload 'dvc-log-edit-mode "dvc-log" "\
@@ -518,7 +518,7 @@ show log-edit buffer in other frame.
 ;;;***
 
 ;;;### (autoloads (dvc-call dvc-apply) "dvc-register" "dvc-register.el"
-;;;;;;  (19408 7045))
+;;;;;;  (19737 46939))
 ;;; Generated autoloads from dvc-register.el
 
 (autoload 'dvc-apply "dvc-register" "\
@@ -535,7 +535,7 @@ POSTFIX, with arguments ARGS.
 ;;;***
 
 ;;;### (autoloads (dvc-load-state dvc-save-state) "dvc-state" "dvc-state.el"
-;;;;;;  (19408 7045))
+;;;;;;  (19737 46939))
 ;;; Generated autoloads from dvc-state.el
 
 (autoload 'dvc-save-state "dvc-state" "\
@@ -556,8 +556,8 @@ Load STATE-FILE (default `dvc-state-file-name`), i.e. evaluate its content.
 
 ;;;***
 
-;;;### (autoloads (dvc-tips-popup) "dvc-tips" "dvc-tips.el" (19408
-;;;;;;  7045))
+;;;### (autoloads (dvc-tips-popup) "dvc-tips" "dvc-tips.el" (19737
+;;;;;;  46939))
 ;;; Generated autoloads from dvc-tips.el
 
 (autoload 'dvc-tips-popup "dvc-tips" "\
@@ -571,7 +571,7 @@ instead.
 ;;;***
 
 ;;;### (autoloads (dvc-enable-prefix-key dvc-prefix-key) "dvc-ui"
-;;;;;;  "dvc-ui.el" (19408 7045))
+;;;;;;  "dvc-ui.el" (19737 46939))
 ;;; Generated autoloads from dvc-ui.el
 
 (eval-and-compile (require 'easymenu))
@@ -682,7 +682,7 @@ Install the DVC prefix key globally.
 ;;;;;;  dvc-log dvc-status dvc-file-diff dvc-delta dvc-diff-against-url
 ;;;;;;  dvc-diff dvc-clone define-dvc-unified-command dvc-remove-files
 ;;;;;;  dvc-revert-files dvc-add-files dvc-init) "dvc-unified" "dvc-unified.el"
-;;;;;;  (19736 24494))
+;;;;;;  (19737 46939))
 ;;; Generated autoloads from dvc-unified.el
 
 (autoload 'dvc-init "dvc-unified" "\
@@ -917,7 +917,7 @@ List available branches.
 ;;;***
 
 ;;;### (autoloads (dvc-reload dvc-trace) "dvc-utils" "dvc-utils.el"
-;;;;;;  (19408 7045))
+;;;;;;  (19737 46939))
 ;;; Generated autoloads from dvc-utils.el
 
 (defmacro dvc-do-in-gnu-emacs (&rest body) "\
@@ -960,7 +960,7 @@ run \"make\".
 ;;;;;;  tla-resolved tla-file-diff tla-file-ediff-against tla-apply-changeset
 ;;;;;;  tla-get-changeset tla-delta tla-changes-last-revision tla-changes-against
 ;;;;;;  tla-update tla-changes tla-edit-log tla-inventory) "tla"
-;;;;;;  "tla.el" (19736 24494))
+;;;;;;  "tla.el" (19737 46939))
 ;;; Generated autoloads from tla.el
 
 (autoload 'tla-inventory "tla" "\
@@ -1391,7 +1391,7 @@ the sent changes or to delete sent changeset tarball (see: `tla-patch-sent-actio
 ;;;***
 
 ;;;### (autoloads (tla-bconfig-mode) "tla-bconfig" "tla-bconfig.el"
-;;;;;;  (19408 7045))
+;;;;;;  (19737 46939))
 ;;; Generated autoloads from tla-bconfig.el
 
 (autoload 'tla-bconfig-mode "tla-bconfig" "\
@@ -1403,8 +1403,8 @@ Major mode to edit GNU arch's build config files.
 
 ;;;***
 
-;;;### (autoloads (tla-browse) "tla-browse" "tla-browse.el" (19408
-;;;;;;  7045))
+;;;### (autoloads (tla-browse) "tla-browse" "tla-browse.el" (19737
+;;;;;;  46939))
 ;;; Generated autoloads from tla-browse.el
 
 (autoload 'tla-browse "tla-browse" "\
@@ -1419,7 +1419,7 @@ already opened are kept open.
 ;;;***
 
 ;;;### (autoloads (tla-make-name-regexp tla-tree-root) "tla-core"
-;;;;;;  "tla-core.el" (19736 24494))
+;;;;;;  "tla-core.el" (19737 46939))
 ;;; Generated autoloads from tla-core.el
 
 (autoload 'tla-tree-root "tla-core" "\
@@ -1454,7 +1454,7 @@ If EXACT is non-nil, match exactly LEVEL.
 ;;;### (autoloads (tla-toggle-non-recursive-inventory tla-toggle-show-ancestor
 ;;;;;;  tla-toggle-three-way-merge tla-use-skip-present-option tla-non-recursive-inventory
 ;;;;;;  tla-show-ancestor tla-three-way-merge xtla) "tla-defs" "tla-defs.el"
-;;;;;;  (19408 7045))
+;;;;;;  (19737 46939))
 ;;; Generated autoloads from tla-defs.el
 
 (eval-and-compile (require 'easymenu) (require 'dvc-core))
@@ -1510,7 +1510,7 @@ Toggle the value of `tla-toggle-non-recursive-inventory'.
 
 ;;;***
 
-;;;### (autoloads nil "tla-dvc" "tla-dvc.el" (19408 7045))
+;;;### (autoloads nil "tla-dvc" "tla-dvc.el" (19737 46939))
 ;;; Generated autoloads from tla-dvc.el
 
 (dvc-register-dvc 'tla "GNU Arch")
@@ -1521,8 +1521,8 @@ Toggle the value of `tla-toggle-non-recursive-inventory'.
 
 ;;;***
 
-;;;### (autoloads (tla-insinuate-gnus) "tla-gnus" "tla-gnus.el" (19408
-;;;;;;  7045))
+;;;### (autoloads (tla-insinuate-gnus) "tla-gnus" "tla-gnus.el" (19737
+;;;;;;  46939))
 ;;; Generated autoloads from tla-gnus.el
 
 (autoload 'tla-insinuate-gnus "tla-gnus" "\
@@ -1538,7 +1538,7 @@ in the *Article* buffers.
 ;;;***
 
 ;;;### (autoloads (tla-tests-run tla-tests-batch) "tla-tests" "tla-tests.el"
-;;;;;;  (19736 24494))
+;;;;;;  (19737 46939))
 ;;; Generated autoloads from tla-tests.el
 
 (autoload 'tla-tests-batch "tla-tests" "\
@@ -1561,7 +1561,7 @@ TEST is the same as the one expected, stored in
 ;;;### (autoloads (xdarcs-dvc-remove-files xdarcs-dvc-revert-files
 ;;;;;;  xdarcs-revision-get-last-revision xdarcs-dvc-diff xdarcs-pull
 ;;;;;;  xdarcs-dvc-missing xdarcs-whatsnew xdarcs-dvc-add-files)
-;;;;;;  "xdarcs" "xdarcs.el" (19408 7045))
+;;;;;;  "xdarcs" "xdarcs.el" (19737 46939))
 ;;; Generated autoloads from xdarcs.el
 
 (autoload 'xdarcs-dvc-add-files "xdarcs" "\
@@ -1613,7 +1613,7 @@ Run darcs remove.
 ;;;***
 
 ;;;### (autoloads (xdarcs-tree-root) "xdarcs-core" "xdarcs-core.el"
-;;;;;;  (19408 7045))
+;;;;;;  (19737 46939))
 ;;; Generated autoloads from xdarcs-core.el
 
 (autoload 'xdarcs-tree-root "xdarcs-core" "\
@@ -1629,7 +1629,7 @@ git managed tree (but return nil).
 
 ;;;***
 
-;;;### (autoloads nil "xdarcs-dvc" "xdarcs-dvc.el" (19408 7045))
+;;;### (autoloads nil "xdarcs-dvc" "xdarcs-dvc.el" (19737 46939))
 ;;; Generated autoloads from xdarcs-dvc.el
 
 (dvc-register-dvc 'xdarcs "Darcs")
@@ -1651,7 +1651,7 @@ git managed tree (but return nil).
 ;;;;;;  xgit-fetch xgit-diff2 xgit-diff-head xgit-diff-index xgit-diff-cached
 ;;;;;;  xgit-dvc-diff xgit-reset-hard xgit-addremove xgit-add-all-files
 ;;;;;;  xgit-dvc-remove-files xgit-remove xgit-dvc-add-files xgit-add-patch
-;;;;;;  xgit-add xgit-clone xgit-init) "xgit" "xgit.el" (19408 7045))
+;;;;;;  xgit-add xgit-clone xgit-init) "xgit" "xgit.el" (19737 46939))
 ;;; Generated autoloads from xgit.el
 
 (autoload 'xgit-init "xgit" "\
@@ -1787,7 +1787,7 @@ LAST-REVISION looks like
 ;;;***
 
 ;;;### (autoloads (xgit-prepare-environment xgit-tree-root) "xgit-core"
-;;;;;;  "xgit-core.el" (19408 7045))
+;;;;;;  "xgit-core.el" (19737 46939))
 ;;; Generated autoloads from xgit-core.el
 
 (autoload 'xgit-tree-root "xgit-core" "\
@@ -1808,8 +1808,8 @@ Prepare the environment to run git.
 
 ;;;***
 
-;;;### (autoloads (xgit-dvc-log) "xgit-dvc" "xgit-dvc.el" (19408
-;;;;;;  7045))
+;;;### (autoloads (xgit-dvc-log) "xgit-dvc" "xgit-dvc.el" (19737
+;;;;;;  46939))
 ;;; Generated autoloads from xgit-dvc.el
 
 (dvc-register-dvc 'xgit "git")
@@ -1829,7 +1829,7 @@ ARG is passed as prefix argument
 ;;;***
 
 ;;;### (autoloads (xgit-insinuate-gnus) "xgit-gnus" "xgit-gnus.el"
-;;;;;;  (19408 7045))
+;;;;;;  (19737 46939))
 ;;; Generated autoloads from xgit-gnus.el
 
 (autoload 'xgit-insinuate-gnus "xgit-gnus" "\
@@ -1839,7 +1839,7 @@ Integrate Xgit into Gnus.
 
 ;;;***
 
-;;;### (autoloads (xgit-log) "xgit-log" "xgit-log.el" (19408 7045))
+;;;### (autoloads (xgit-log) "xgit-log" "xgit-log.el" (19737 46939))
 ;;; Generated autoloads from xgit-log.el
 
 (autoload 'xgit-log "xgit-log" "\
@@ -1856,7 +1856,7 @@ FILE is filename in repostory to filter logs by matching filename.
 ;;;***
 
 ;;;### (autoloads (xgit-log-edit-mode) "xgit-log-edit" "xgit-log-edit.el"
-;;;;;;  (19408 7045))
+;;;;;;  (19737 46939))
 ;;; Generated autoloads from xgit-log-edit.el
 
 (add-to-list 'auto-mode-alist '("/COMMIT_EDITMSG$" . xgit-log-edit-mode))
@@ -1871,7 +1871,7 @@ Commands:
 ;;;***
 
 ;;;### (autoloads (xgit-rebase-todo-mode) "xgit-rebase-todo" "xgit-rebase-todo.el"
-;;;;;;  (19408 7045))
+;;;;;;  (19737 46939))
 ;;; Generated autoloads from xgit-rebase-todo.el
 
 (add-to-list 'auto-mode-alist '("/git-rebase-todo$" . xgit-rebase-todo-mode))
@@ -1900,7 +1900,7 @@ Commands:
 ;;;;;;  xhg-log xhg-log-toggle-verbose xhg-add-all-files xhg-forget
 ;;;;;;  xhg-dvc-rename xhg-addremove xhg-dvc-remove-files xhg-rollback
 ;;;;;;  xhg-dvc-revert-files xhg-dvc-add-files xhg-init) "xhg" "xhg.el"
-;;;;;;  (19736 24494))
+;;;;;;  (19737 46939))
 ;;; Generated autoloads from xhg.el
 
 (autoload 'xhg-init "xhg" "\
@@ -2187,7 +2187,7 @@ Shows the logs of the new arrived changesets after a pull and before an update.
 
 ;;;### (autoloads (xhg-annotate-quit xhg-annotate xhg-annotate-show-next-rev-number-log
 ;;;;;;  xhg-annotate-show-prec-rev-number-log xhg-annotate-show-rev-number-log)
-;;;;;;  "xhg-annotate" "xhg-annotate.el" (19408 7045))
+;;;;;;  "xhg-annotate" "xhg-annotate.el" (19737 46939))
 ;;; Generated autoloads from xhg-annotate.el
 
 (defvar xhg-annotate-mode-map (let ((map (make-sparse-keymap))) (define-key map [(shift down)] 'xhg-annotate-show-next-rev-number-log) (define-key map [(shift up)] 'xhg-annotate-show-prec-rev-number-log) (define-key map (kbd "<return>") 'xhg-annotate-show-rev-number-log) (define-key map [113] 'xhg-annotate-quit) map) "\
@@ -2222,8 +2222,8 @@ Quit and restore precedent window config.
 
 ;;;***
 
-;;;### (autoloads (xhg-tree-root) "xhg-core" "xhg-core.el" (19408
-;;;;;;  7045))
+;;;### (autoloads (xhg-tree-root) "xhg-core" "xhg-core.el" (19737
+;;;;;;  46939))
 ;;; Generated autoloads from xhg-core.el
 
 (autoload 'xhg-tree-root "xhg-core" "\
@@ -2240,7 +2240,7 @@ mercurial managed tree (but return nil).
 ;;;***
 
 ;;;### (autoloads (xhg-dvc-export-via-email) "xhg-dvc" "xhg-dvc.el"
-;;;;;;  (19408 7045))
+;;;;;;  (19737 46939))
 ;;; Generated autoloads from xhg-dvc.el
 
 (dvc-register-dvc 'xhg "Mercurial")
@@ -2260,8 +2260,8 @@ Not documented
 
 ;;;***
 
-;;;### (autoloads (xhg-insinuate-gnus) "xhg-gnus" "xhg-gnus.el" (19408
-;;;;;;  7045))
+;;;### (autoloads (xhg-insinuate-gnus) "xhg-gnus" "xhg-gnus.el" (19737
+;;;;;;  46939))
 ;;; Generated autoloads from xhg-gnus.el
 
 (autoload 'xhg-insinuate-gnus "xhg-gnus" "\
@@ -2277,8 +2277,8 @@ K t s `xhg-gnus-article-view-status-for-import-patch'
 ;;;;;;  xhg-qsingle xhg-qheader xhg-qprev xhg-qnext xhg-qtop xhg-qrename
 ;;;;;;  xhg-qconvert-to-permanent xhg-qdelete xhg-qdiff xhg-qseries
 ;;;;;;  xhg-qunapplied xhg-qapplied xhg-qpush xhg-qpop xhg-qrefresh-header
-;;;;;;  xhg-qrefresh xhg-qnew xhg-qinit) "xhg-mq" "xhg-mq.el" (19408
-;;;;;;  7045))
+;;;;;;  xhg-qrefresh xhg-qnew xhg-qinit) "xhg-mq" "xhg-mq.el" (19737
+;;;;;;  46939))
 ;;; Generated autoloads from xhg-mq.el
 
 (autoload 'xhg-qinit "xhg-mq" "\
@@ -2400,7 +2400,7 @@ Show the mq stack.
 ;;;***
 
 ;;;### (autoloads (xhg-dvc-log) "xhg-revision" "xhg-revision.el"
-;;;;;;  (19408 7045))
+;;;;;;  (19737 46939))
 ;;; Generated autoloads from xhg-revision.el
 
 (autoload 'xhg-dvc-log "xhg-revision" "\
@@ -2412,7 +2412,7 @@ Show a dvc formatted log for xhg.
 
 ;;;### (autoloads (xmtn-conflicts-clean xmtn-conflicts-review xmtn-conflicts-merge
 ;;;;;;  xmtn-conflicts-propagate) "xmtn-conflicts" "xmtn-conflicts.el"
-;;;;;;  (19736 24494))
+;;;;;;  (19737 46939))
 ;;; Generated autoloads from xmtn-conflicts.el
 
 (autoload 'xmtn-conflicts-propagate "xmtn-conflicts" "\
@@ -2450,7 +2450,7 @@ Remove conflicts resolution files from WORKSPACE (a directory; default prompt).
 ;;;;;;  xmtn-dvc-status xmtn-dvc-command-version xmtn-dvc-delta xmtn-dvc-diff
 ;;;;;;  xmtn-dvc-search-file-in-diff xmtn-show-base-revision xmtn-dvc-log-edit-done
 ;;;;;;  xmtn-dvc-log-edit xmtn-dvc-log-edit-file-name-func) "xmtn-dvc"
-;;;;;;  "xmtn-dvc.el" (19736 24494))
+;;;;;;  "xmtn-dvc.el" (19737 46939))
 ;;; Generated autoloads from xmtn-dvc.el
 
 (dvc-register-dvc 'xmtn "monotone")
@@ -2602,7 +2602,7 @@ Not documented
 ;;;***
 
 ;;;### (autoloads (xmtn-match--test) "xmtn-match" "xmtn-match.el"
-;;;;;;  (19408 7045))
+;;;;;;  (19737 46939))
 ;;; Generated autoloads from xmtn-match.el
 
 (autoload 'xmtn-match--test "xmtn-match" "\
@@ -2613,7 +2613,7 @@ Not documented
 ;;;***
 
 ;;;### (autoloads (xmtn-tree-root) "xmtn-minimal" "xmtn-minimal.el"
-;;;;;;  (19408 7045))
+;;;;;;  (19737 46939))
 ;;; Generated autoloads from xmtn-minimal.el
 
 (autoload 'xmtn-tree-root "xmtn-minimal" "\
@@ -2625,7 +2625,7 @@ Not documented
 
 ;;;### (autoloads (xmtn-status-one-1 xmtn-status-one xmtn-status-multiple
 ;;;;;;  xmtn-update-multiple) "xmtn-multi-status" "xmtn-multi-status.el"
-;;;;;;  (19736 24494))
+;;;;;;  (19737 46939))
 ;;; Generated autoloads from xmtn-multi-status.el
 
 (autoload 'xmtn-update-multiple "xmtn-multi-status" "\
@@ -2651,7 +2651,7 @@ Create an xmtn-multi-status buffer from xmtn-propagate.
 ;;;***
 
 ;;;### (autoloads (xmtn-propagate-one xmtn-propagate-multiple) "xmtn-propagate"
-;;;;;;  "xmtn-propagate.el" (19736 24494))
+;;;;;;  "xmtn-propagate.el" (19737 46939))
 ;;; Generated autoloads from xmtn-propagate.el
 
 (autoload 'xmtn-propagate-multiple "xmtn-propagate" "\
@@ -2673,7 +2673,7 @@ Show all actions needed to propagate FROM-WORK to TO-WORK.
 ;;;;;;  xmtn-view-heads-revlist xmtn-review-update xmtn-dvc-missing
 ;;;;;;  xmtn-dvc-changelog xmtn-log xmtn-dvc-log xmtn-revision-list-entry-patch-printer
 ;;;;;;  xmtn-revision-refresh-maybe) "xmtn-revlist" "xmtn-revlist.el"
-;;;;;;  (19736 24494))
+;;;;;;  (19737 46939))
 ;;; Generated autoloads from xmtn-revlist.el
 
 (autoload 'xmtn-revision-refresh-maybe "xmtn-revlist" "\
@@ -2731,7 +2731,7 @@ Not documented
 ;;;***
 
 ;;;### (autoloads (xmtn-sync-review xmtn-sync-sync) "xmtn-sync" "xmtn-sync.el"
-;;;;;;  (19736 24494))
+;;;;;;  (19737 46939))
 ;;; Generated autoloads from xmtn-sync.el
 
 (autoload 'xmtn-sync-sync "xmtn-sync" "\
@@ -2754,7 +2754,7 @@ Display sync results in `xmtn-sync-save-file'.
 ;;;;;;  "dvc-version.el" "dvc-xemacs.el" "tla-autoconf.el" "xgit-annotate.el"
 ;;;;;;  "xgit-revision.el" "xhg-be.el" "xhg-log.el" "xmtn-automate.el"
 ;;;;;;  "xmtn-base.el" "xmtn-basic-io.el" "xmtn-compat.el" "xmtn-ids.el"
-;;;;;;  "xmtn-run.el") (19736 24522 504696))
+;;;;;;  "xmtn-run.el") (19926 5199 863989))
 
 ;;;***
 

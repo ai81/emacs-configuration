@@ -171,7 +171,12 @@
                 ) auto-mode-alist));;файлы с расширением .h подключаем в
                                    ;;режиме С++
 ;;устанавливаем нашу функцию
-(global-set-key  [f7] 'my-compile-file)
+(defun my-project-compile-fun ()
+  (interactive)
+  (save-some-buffers 1)
+  (project-compile ""))
+
+(global-set-key  [f7] 'my-project-compile-fun) ;;'my-compile-file)
 (global-set-key  [(shift f7)] 'my-compile-tests-file)
 
 (global-set-key [f4] 'my-insert-function-description)
@@ -187,7 +192,7 @@
 (defun my-insert-copyright ()
   (interactive)
   (insert "/*---------------------------------------------------------------------------\n"
-          " * Copyright 2011 Igor Daniloff.\n"
+          " * Copyright 2011 Anton Ivanov.\n"
           " * \n"
           " * Following source code is the property of Doctor Web, Ltd.\n"
           " * Use is subject to license terms.\n"

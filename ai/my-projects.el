@@ -10,7 +10,12 @@
                            ("nss" . "~/nss/drweb-nss")
                            ("gui" . "~/gui/DrWebGUI_Unix/")
                            ("gui-new" . "~/gui/DrWebGUI_Unix_new/")
-))
+
+                           ("mobileapp-basesearch" . "/home/antonio/svn/arcadia/mobileapp-version/arcadia/")
+                           ("arcadia-trunk" . "/home/antonio/svn/arcadia/trunk/arcadia/")
+                           ("rabota-arcadia" . "/home/antonio/svn/arcadia/rabota/arcadia/")
+                           ("review" . "/home/antonio/review/")
+                           ))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;mk-project specification             ;;
@@ -60,6 +65,66 @@
         (open-files-cache "/home/ai/nss/drweb-nss/open-files")
         (vcs              git)
         (compile-cmd      "make -j8 -k")
+        (ack-args         "--flush")
+        (startup-hook     nil)
+        (shutdown-hook    nil)))
+
+(project-def "mobileapp-basesearch"
+      '((basedir          "/home/antonio/svn/arcadia/mobileapp-version/arcadia")
+        (src-patterns     ("*.H" "*.C" "*.h" "*.c" "*.cxx" "*.cpp" "*.hpp" "*.hh"))
+        (ignore-patterns  ("*cvs*" "*.png" "*.map" "*.md5" "*.html" "*~" 
+                            "*.Po" "*.Tpo" "*.supp" "ChangeLog" "*.o" "files"
+                            "*.a" "Entries" "Makefile" "basesearch"))
+        (tags-file        "/home/antonio/svn/arcadia/mobileapp-version/arcadia/TAGS")
+        (file-list-cache  "/home/antonio/svn/arcadia/mobileapp-version/arcadia/files")
+        (open-files-cache "/home/antonio/svn/arcadia/mobileapp-version/arcadia/open-files")
+        (vcs              svn)
+        (compile-cmd      "cd /home/antonio/svn/arcadia/mobileapp-version/release; make -j4 -k; cd -")
+        (ack-args         "--flush")
+        (startup-hook     nil)
+        (shutdown-hook    nil)))
+
+(project-def "arcadia-trunk"
+      '((basedir          "/home/antonio/svn/arcadia/trunk/arcadia")
+        (src-patterns     ("*.H" "*.C" "*.h" "*.c" "*.cxx" "*.cpp" "*.hpp" "*.hh"))
+        (ignore-patterns  ("*cvs*" "*.png" "*.map" "*.md5" "*.html" "*~" 
+                            "*.Po" "*.Tpo" "*.supp" "ChangeLog" "*.o" "files"
+                            "*.a" "Entries" "Makefile"))
+        (tags-file        "/home/antonio/svn/arcadia/trunk/arcadia/TAGS")
+        (file-list-cache  "/home/antonio/svn/arcadia/trunk/arcadia/files")
+        (open-files-cache "/home/antonio/svn/arcadia/trunk/arcadia/open-files")
+        (vcs              svn)
+        (compile-cmd      "cd /home/antonio/svn/arcadia/trunk/debug; make -j4 -k; cd -")
+        (ack-args         "--flush")
+        (startup-hook     nil)
+        (shutdown-hook    nil)))
+
+(project-def "rabota-arcadia"
+             '((basedir          "/home/antonio/svn/arcadia/rabota/arcadia")
+               (src-patterns     ("*.H" "*.C" "*.h" "*.c" "*.cxx" "*.cpp" "*.hpp" "*.hh"))
+               (ignore-patterns  ("*cvs*" "*.png" "*.map" "*.md5" "*.html" "*~" 
+                                  "*.Po" "*.Tpo" "*.supp" "ChangeLog" "*.o" "files"
+                                  "*.a" "Entries" "Makefile" "basesearch"))
+        (tags-file        "/home/antonio/svn/arcadia/rabota/TAGS")
+        (file-list-cache  "/home/antonio/svn/arcadia/rabota/files")
+        (open-files-cache "/home/antonio/svn/arcadia/rabota/open-files")
+        (vcs              svn)
+        (compile-cmd      "cd /home/antonio/svn/arcadia/rabota/release; make -j4 -k; cd -")
+        (ack-args         "--flush")
+        (startup-hook     nil)
+        (shutdown-hook    nil)))
+
+(project-def "review"
+             '((basedir          "/home/antonio/review")
+               (src-patterns     ("*.H" "*.C" "*.h" "*.c" "*.cxx" "*.cpp" "*.hpp" "*.hh"))
+               (ignore-patterns  ("*cvs*" "*.png" "*.map" "*.md5" "*.html" "*~" 
+                                  "*.Po" "*.Tpo" "*.supp" "ChangeLog" "*.o" "files"
+                                  "*.a" "Entries" "Makefile"))
+        (tags-file        "/home/antonio/review/TAGS")
+        (file-list-cache  "/home/antonio/review/files")
+        (open-files-cache "/home/antonio/review/open-files")
+        (vcs              git)
+        (compile-cmd      "cd /home/antonio/review/release; make -j4 -k; cd -")
         (ack-args         "--flush")
         (startup-hook     nil)
         (shutdown-hook    nil)))

@@ -30,7 +30,7 @@
 (global-srecode-minor-mode 1)
 
 (semantic-add-system-include "/usr/local/include" 'c++-mode)
-(setq stl-base-dir "/usr/include/c++/4.4")
+(setq stl-base-dir "/usr/include/c++/4.5")
 (semantic-add-system-include stl-base-dir 'c++-mode)
 
 ;; ;;and ecb
@@ -78,6 +78,73 @@
     )
   )
 
+(setq ma-base-dir "/home/antonio/svn/arcadia/mobileapp-version/arcadia")
+(when (file-accessible-directory-p ma-base-dir)
+  ( ede-cpp-root-project 
+    "mobileapp-basesearch"
+    :name "mobileapp-basesearch"
+    :version "1.0"
+    :file (concat ma-base-dir "/dont_notify_success.users" )
+    :include-path '("/"
+                    )
+    :system-include-path '("/"
+                    )
+    :spp-table '(("HAVE_CONFIG_H" . "1")
+                 ("BUILD_FOR_APPS_SEARCH" . "1")
+                 )
+    )
+  )
+
+(setq trunk-base-dir "/home/antonio/svn/arcadia/trunk/arcadia")
+(when (file-accessible-directory-p trunk-base-dir)
+  ( ede-cpp-root-project 
+    "arcadia-trunk"
+    :name "arcadia-trunk"
+    :version "1.0"
+    :file (concat trunk-base-dir "/dont_notify_success.users" )
+    :include-path '("/"
+                    )
+    :system-include-path '("/"
+                    )
+    :spp-table '(("HAVE_CONFIG_H" . "1")
+                 )
+    )
+  )
+
+(setq rabota-base-dir "/home/antonio/svn/arcadia/rabota/arcadia")
+(when (file-accessible-directory-p rabota-base-dir)
+  ( ede-cpp-root-project 
+    "rabota-arc"
+    :name "rabota-arc"
+    :version "1.0"
+    :file (concat rabota-base-dir "/dont_notify_success.users" )
+    :include-path '("/"
+                    )
+    :system-include-path '("/"
+                    )
+    :spp-table '(("HAVE_CONFIG_H" . "1")
+                 ("BUILD_FOR_APPS_SEARCH" . "1")
+                 )
+    )
+  )
+
+(setq review-base-dir "/home/antonio/review")
+(when (file-accessible-directory-p review-base-dir)
+  ( ede-cpp-root-project 
+    "review-arc"
+    :name "review-arc"
+    :version "1.0"
+    :file (concat review-base-dir "/files" )
+    :include-path '("/"
+                    "/git/arcadia/arcadia"
+                    )
+    :system-include-path '("/"
+                    )
+    :spp-table '(("HAVE_CONFIG_H" . "1")
+                 ("BUILD_FOR_APPS_SEARCH" . "1")
+                 )
+    )
+  )
 
 (defun semantic-ia-fast-jump-with-save-pos (point)
   "Save pos in tag ring to return to original pos by M-*"
@@ -86,13 +153,20 @@
   (semantic-ia-fast-jump point)
  )
 
+(defun semantic-decoration-include-visit-with-save-pos ()
+  "Save pos in tag ring to return to original pos by M-*"
+  (interactive)
+  (ring-insert find-tag-marker-ring (point-marker))
+  (semantic-decoration-include-visit)
+ )
+
 ;; customisation of modes
 (defun my-cedet-hook ()
   (local-set-key [(control return)] 'semantic-ia-complete-symbol-menu)
   (local-set-key "\C-c?" 'ac-complete-semantic);;semantic-ia-complete-symbol)
   ;;
   (local-set-key "\C-c>" 'semantic-complete-analyze-inline)
-  (local-set-key "\C-c=" 'semantic-decoration-include-visit)
+  (local-set-key "\C-c=" 'semantic-decoration-include-visit-with-save-pos)
 
   (local-set-key "\C-cj" 'semantic-ia-fast-jump-with-save-pos)
   (local-set-key "\C-cq" 'semantic-ia-show-doc)

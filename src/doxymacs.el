@@ -1074,10 +1074,10 @@ the completion or nil if canceled by the user."
 ;; needs it.  So, here is a placeholder just to get it to stop
 ;; complaining. This is a hack, since I don't know what the proper fix
 ;; should be.
-(if (not (fboundp 'deactivate-mark))
-    (defsubst deactivate-mark ()
-      (zmacs-deactivate-region)))	; Is this correct?
-;; Also need a hack for mark-active
+;; (if (not (fboundp 'deactivate-mark))
+;;     (defsubst deactivate-mark ()
+;;       (zmacs-eactivate-region)))	; Is this correct?
+;; also need a hack for mark-active
 (if (not (boundp 'mark-active))
     (defvar mark-active nil))		; Is this correct? Probably not.
 
@@ -1476,12 +1476,11 @@ declarations."
      ;; parenthesis first then comma. there must exist a closing parenthesis
      (t
       ;; cut off the (...) part
-      (save-excursion
         ;; create temporary buffer
         (set-buffer (get-buffer-create "*doxymacs-scratch*"))
         (erase-buffer)
         (insert args-string)
-        (beginning-of-buffer)
+        (goto-char (point-min))
         (search-forward "(")
         (prog1
             (let ((depth 1)
@@ -1509,7 +1508,7 @@ declarations."
                       ;; and split rest of declaration list
                       (doxymacs-save-split
                        (buffer-substring (1+ (point)) (point-max))))))
-          (kill-buffer (current-buffer))))))))
+          (kill-buffer (current-buffer)))))))
 
 
 ;; This regexp fails if the opt. parentheses

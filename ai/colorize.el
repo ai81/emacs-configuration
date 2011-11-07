@@ -29,6 +29,7 @@
 ;; add lineker mode - highlight long lines
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(require 'lineker)
-(add-hook 'c-mode-common-hook 'lineker-mode)
+;; (require 'lineker)
+;; (add-hook 'c-mode-common-hook 'lineker-mode)
+
 ;;(add-hook 'text-mode-hook 'lineker-mode)
