@@ -137,6 +137,8 @@
     :file (concat review-base-dir "/files" )
     :include-path '("/"
                     "/git/arcadia/arcadia"
+                    "/git/otzyv_filter/src"
+                    "/git"
                     )
     :system-include-path '("/"
                     )

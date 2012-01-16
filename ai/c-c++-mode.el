@@ -35,14 +35,20 @@
 ;; there was no error at all.
 (setq compilation-finish-functions 'compile-autoclose)
 (defun compile-autoclose (buffer string)
-  (cond ((and 
-          (string-match "finished" string) 
-          (not (string-match "*grep*" (buffer-name (get-buffer buffer)))))
-         (bury-buffer "*compilation*")
-         (winner-undo)
-         (message "Build successful."))
-        (t                                                                    
-         (message "Compilation exited abnormally: %s" string))))
+  (let ((oldbuf (current-buffer)))
+    (set-buffer buffer)
+    (cond ((and 
+            (string-match "finished" string) 
+            (not (string-match "*grep*" (buffer-name (get-buffer buffer))))
+            (not (string-match "not remade because of errors" (buffer-string)))
+            )
+           (bury-buffer "*compilation*")
+           (winner-undo)
+           (message "Build successful."))
+          (t                                                                    
+           (message "Compilation exited abnormally: %s" string)))
+    (set-buffer oldbuf)
+    ))
 
 ;;функция сохраняет содержимое всех буферов
 ;;и затем вызывает make из католога где находится текущий файл
