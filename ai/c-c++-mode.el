@@ -210,3 +210,11 @@
 
 ;;поддержка расширенного парсера в C/C++
 (require 'ctypes)
+
+;; удаляем финальные пробелы
+(add-hook 'c-mode-common-hook
+      (lambda()
+        (add-hook 'local-write-file-hooks
+              '(lambda()
+                 (save-excursion
+                   (delete-trailing-whitespace))))))
