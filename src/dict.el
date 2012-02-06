@@ -279,8 +279,8 @@ display the results in the Emacs buffer."
 
 (defun dict-get-databases (host)
   "Get a list of available databases."
-  (let* ((dbinfo-string (shell-command-to-string (format "dict -h %s -D 2> /dev/null | awk 'BEGIN { print \"(\"; } \
-/^[ ]+/ { match($0, /^[ ]+([a-z0-9]+)[ ]+(.+)/, r); print \"(\\\"\" r[1] \"\\\"\" \" \\\"\" r[2]\"\\\")\"; } \
+  (let* ((dbinfo-string (shell-command-to-string (format "dict -h %s -D 2> /dev/null | PATH=/opt/local/bin:$PATH gawk 'BEGIN { print \"(\"; } \
+/^[ ]+/ { match($0, /^[ ]+([a-z0-9]+)[ ]+(.+)/, r); print \"(\\\"\" r[1] \"\\\"\" \" \\\"\" r[2] \"\\\")\"; } \
 END { print \")\" }'" host)))
 	 (dbinfo (read dbinfo-string))
 	 (dbnames (mapcar 'car dbinfo))
@@ -289,8 +289,8 @@ END { print \")\" }'" host)))
 
 (defun dict-get-strategies (host)
   "Get a list of strategies."
-  (let* ((stratsinfo-string (shell-command-to-string (format "dict -h %s -S 2> /dev/null | awk 'BEGIN { print \"(\"; } \
-/^[ ]+/ { match($0, /^[ ]+([a-z0-9]+)[ ]+(.+)/, r); print \"(\\\"\" r[1] \"\\\"\" \" \\\"\" r[2]\"\\\")\"; } \
+  (let* ((stratsinfo-string (shell-command-to-string (format "dict -h %s -S 2> /dev/null | PATH=/opt/local/bin:$PATH gawk 'BEGIN { print \"(\"; } \
+/^[ ]+/ { match($0, /^[ ]+([a-z0-9]+)[ ]+(.+)/, r); print \"(\\\"\" r[1] \"\\\"\" \" \\\"\" r[2] \"\\\")\"; } \
 END { print \")\" }'" host)))
 	 (stratsinfo (read stratsinfo-string))
 	 (stnames (mapcar 'car stratsinfo))
@@ -427,7 +427,6 @@ the databases until a match is found, and then stop searching."
 		      (if (cadr (assoc host dict-databases)) (cadr (assoc host dict-databases)) 
 			(dict-get-database-names host))))
 	    dict-servers)))
-
 (defun dict-add-result-to-buffer (result-buffer output-buffer)
   "Add dict's answer from RESULT-BUFFER to OUTPUT-BUFFER."
   ;; Preformat data in the result buffer

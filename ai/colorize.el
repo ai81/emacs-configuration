@@ -24,7 +24,7 @@
 (add-hook 'c-mode-common-hook 'show-ws-highlight-hard-spaces)
 (add-hook 'text-mode-hook 'show-ws-highlight-hard-spaces)
 (add-hook 'makefile-mode-hook 'show-ws-highlight-hard-spaces)
-(add-hook 'c-mode-common-hook 'show-ws-highlight-trailing-whitespace)
+;;(add-hook 'c-mode-common-hook 'show-ws-highlight-trailing-whitespace)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; add lineker mode - highlight long lines

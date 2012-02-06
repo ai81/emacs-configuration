@@ -1,5 +1,5 @@
 ;; use russian spell check by default
-(ispell-change-dictionary "russian" 1)
+;;(ispell-change-dictionary "russian" 1)
 
 ;; time in 24-hour format
 (setq display-time-24hr-format t)
