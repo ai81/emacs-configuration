@@ -95,7 +95,7 @@
     )
   )
 
-(setq trunk-base-dir "/home/antonio/svn/arcadia/trunk/arcadia")
+(setq trunk-base-dir "~/svn/arcadia/trunk/arcadia")
 (when (file-accessible-directory-p trunk-base-dir)
   ( ede-cpp-root-project 
     "arcadia-trunk"
