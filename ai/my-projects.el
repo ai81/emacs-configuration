@@ -7,11 +7,11 @@
                            ("maild-5.0" . "~/DevelMail/maild-5_0-branch")
                            ("maild-rel" . "~/DevelMail/release-drweb-maild/")
                            ("maild" . "~/DevelMail/drweb-maild/")
-                           ("nss" . "~/nss/drweb-nss")
+                           ("nss" . "~/private/drweb/nss/drweb-nss")
                            ("gui" . "~/gui/DrWebGUI_Unix/")
                            ("gui-new" . "~/gui/DrWebGUI_Unix_new/")
 
-                           ("mobileapp-basesearch" . "/home/antonio/svn/arcadia/mobileapp-version/arcadia/")
+                           ("mobileapps" . "~/svn/arcadia/mobileapp-version/arcadia/")
                            ("arcadia-trunk" . "~/svn/arcadia/trunk/arcadia/")
                            ("rabota-arcadia" . "~/svn/arcadia/rabota/arcadia/")
                            ("review" . "~/review/")
@@ -53,23 +53,23 @@
         (shutdown-hook    nil)))
 
 (project-def "nss"
-      '((basedir          "/home/ai/nss/drweb-nss/")
+      '((basedir          "~/private/drweb/nss/drweb-nss/")
         (src-patterns     ("*.H" "*.C" "*.h" "*.c" "*.cxx" "*.cpp" "*.hpp" "*.hh"))
         (ignore-patterns  ("*cvs*" "*.png" "*.map" "*.md5" "*.html" "*~" 
                             "*.Po" "*.Tpo" "*.supp" "ChangeLog" "*.o" "files"
                             "*.a" "drweb-nss"  "drweb-nss-qcontrol"
                             "Entries" "Makefile" "Makefile.in" "config.status"
                             "configure"))
-        (tags-file        "/home/ai/nss/drweb-nss/TAGS")
-        (file-list-cache  "/home/ai/nss/drweb-nss/files")
-        (open-files-cache "/home/ai/nss/drweb-nss/open-files")
+        (tags-file        "~/private/drweb/nss/drweb-nss/TAGS")
+        (file-list-cache  "~/private/drweb/nss/drweb-nss/files")
+        (open-files-cache "~/private/drweb/nss/drweb-nss/open-files")
         (vcs              git)
         (compile-cmd      "make -j8 -k")
         (ack-args         "--flush")
         (startup-hook     nil)
         (shutdown-hook    nil)))
 
-(project-def "mobileapp-basesearch"
+(project-def "mobileapps"
       '((basedir          "~/svn/arcadia/mobileapp-version/arcadia")
         (src-patterns     ("*.H" "*.C" "*.h" "*.c" "*.cxx" "*.cpp" "*.hpp" "*.hh"))
         (ignore-patterns  ("*cvs*" "*.png" "*.map" "*.md5" "*.html" "*~" 
@@ -79,7 +79,7 @@
         (file-list-cache  "~/svn/arcadia/mobileapp-version/arcadia/files")
         (open-files-cache "~/svn/arcadia/mobileapp-version/arcadia/open-files")
         (vcs              svn)
-        (compile-cmd      "cd ~/svn/arcadia/mobileapp-version/release; make -j4 -k; cd -")
+        (compile-cmd      "cd ~/svn/arcadia/mobileapp-version/release; make -j8 -k; cd -")
         (ack-args         "--flush")
         (startup-hook     nil)
         (shutdown-hook    nil)))
@@ -94,7 +94,7 @@
         (file-list-cache  "~/svn/arcadia/trunk/arcadia/files")
         (open-files-cache "~/svn/arcadia/trunk/arcadia/open-files")
         (vcs              svn)
-        (compile-cmd      "cd ~/svn/arcadia/trunk/debug; make -j4 -k; cd -")
+        (compile-cmd      "cd ~/svn/arcadia/trunk/release; make -j8 -k; cd -")
         (ack-args         "--flush")
         (startup-hook     nil)
         (shutdown-hook    nil)))
@@ -109,7 +109,7 @@
         (file-list-cache  "~/svn/arcadia/rabota/files")
         (open-files-cache "~/svn/arcadia/rabota/open-files")
         (vcs              svn)
-        (compile-cmd      "cd ~/svn/arcadia/rabota/release; make -j4 -k; cd -")
+        (compile-cmd      "cd ~/svn/arcadia/rabota/release; make -j8 -k; cd -")
         (ack-args         "--flush")
         (startup-hook     nil)
         (shutdown-hook    nil)))
@@ -124,7 +124,7 @@
         (file-list-cache  "~/review/files")
         (open-files-cache "~/review/open-files")
         (vcs              git)
-        (compile-cmd      "cd ~/review/release; make -j4 -k; cd -")
+        (compile-cmd      "cd ~/review/release; make -j8 -k; cd -")
         (ack-args         "--flush")
         (startup-hook     nil)
         (shutdown-hook    nil)))

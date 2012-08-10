@@ -1,5 +1,7 @@
-#+TITLE: Emacs Starter Kit
-#+SEQ_TODO: PROPOSED TODO STARTED | DONE DEFERRED REJECTED
+a#+TITLE: Emacs Starter Kit
+#+SEQ_TODO: PROPOSED TODO STARTED | DONE DEFERRED REJECTED    Cdbg << "title=" << realTitle << " ht=" << highlitedTitle << " strTitle=" << strTitle <<
+        Endl;//TEMP
+
 #+OPTIONS: H:2 num:nil toc:t
 #+STARTUP: oddeven
 

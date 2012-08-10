@@ -30,7 +30,8 @@
 (global-srecode-minor-mode 1)
 
 (semantic-add-system-include "/usr/local/include" 'c++-mode)
-(setq stl-base-dir "/usr/include/c++/4.5")
+(semantic-add-system-include "/opt/local/include" 'c++-mode)
+(setq stl-base-dir "/opt/local/include/gcc44/c++")
 (semantic-add-system-include stl-base-dir 'c++-mode)
 
 ;; ;;and ecb
@@ -58,7 +59,7 @@
   )
 
 
-(setq nss-base-dir "/home/ai/nss/drweb-nss")
+(setq nss-base-dir "/User/antonio/private/drweb/nss/drweb-nss")
 (when (file-accessible-directory-p nss-base-dir)
   ( ede-cpp-root-project 
     "nss"
@@ -78,7 +79,7 @@
     )
   )
 
-(setq ma-base-dir "/home/antonio/svn/arcadia/mobileapp-version/arcadia")
+(setq ma-base-dir "/Users/antonio/svn/arcadia/mobileapp-version/arcadia")
 (when (file-accessible-directory-p ma-base-dir)
   ( ede-cpp-root-project 
     "mobileapp-basesearch"
@@ -111,7 +112,7 @@
     )
   )
 
-(setq rabota-base-dir "/home/antonio/svn/arcadia/rabota/arcadia")
+(setq rabota-base-dir "/Users/antonio/svn/arcadia/rabota/arcadia")
 (when (file-accessible-directory-p rabota-base-dir)
   ( ede-cpp-root-project 
     "rabota-arc"
@@ -128,7 +129,7 @@
     )
   )
 
-(setq review-base-dir "/home/antonio/review")
+(setq review-base-dir "/Users/antonio/review")
 (when (file-accessible-directory-p review-base-dir)
   ( ede-cpp-root-project 
     "review-arc"

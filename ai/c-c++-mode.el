@@ -103,7 +103,7 @@
 (defun my-c-mode-common-hook ()
   ;; включить режимы auto-newline и hungry-delete
   (c-toggle-auto-hungry-state 1)
-  (flyspell-prog-mode);;включаем проверку правописания в комментариях и строках 
+  ;;(flyspell-prog-mode);;включаем проверку правописания в комментариях и строках 
   (ispell-change-dictionary "american")
   ;;<RET> работает как C-j  
   (define-key c-mode-base-map "\C-m" 'c-context-line-break)
