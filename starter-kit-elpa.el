@@ -1,9 +1,9 @@
 
 (defvar starter-kit-packages (list 'idle-highlight
-                                   'ruby-mode
+                                   ;;'ruby-mode
                                    'inf-ruby
-                                   'js2-mode
-                                   'css-mode
+                                   ;;'js2-mode
+                                   ;;'css-mode
                                    'yasnippet-bundle
                                    'gist
                                    'paredit)

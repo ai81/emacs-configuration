@@ -91,11 +91,11 @@
 
 (starter-kit-load "starter-kit-lisp.org")
 
-(starter-kit-load "starter-kit-haskell.org")
+;;(starter-kit-load "starter-kit-haskell.org")
 
-(starter-kit-load "starter-kit-ruby.org")
+;;(starter-kit-load "starter-kit-ruby.org")
 
-(starter-kit-load "starter-kit-js.org")
+;;(starter-kit-load "starter-kit-js.org")
 
 (starter-kit-load "starter-kit-perl.org")
 

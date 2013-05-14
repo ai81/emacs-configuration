@@ -1,7 +1,0 @@
-(setq dict-servers '("localhost"))
-(require 'dict)
-(setq dict-buffer-coding-system 'utf-8)
-(global-set-key "\C-cdd" 'dict)
-(global-set-key "\C-cdr" 'dict-region)
-(global-set-key "\C-cdm" 'dict-multiple)
-(global-set-key "\C-cds" 'dict-on-server)

@@ -21,7 +21,7 @@
 ;; public to local server
 (setq org-publish-project-alist
       '(( "ai-local-web-server"
-        :base-directory "/home/ai/.emacs.d/ai/my-org-files" ;;,my-org-dir
+        :base-directory "~/.emacs.d/ai/my-org-files" ;;,my-org-dir
         :base-extension "fake"
         :include ("priorities.org")
         :publishing-directory "/sudo:root@localhost:/var/www/"

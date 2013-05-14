@@ -1,38 +1,42 @@
-;; Load CEDET
-;; See cedet/common/cedet.info for configuration details.
-(load-file "~/.emacs.d/src/cedet/common/cedet.el")
-;;(semantic-mode);;for emacs 23.2 and above
+;;Load CEDET
+(load-file "/Applications/Emacs.app/Contents/Resources/lisp/cedet/cedet.elc")
+(setq cedet-root-path (file-name-as-directory "~/.emacs.d/cedet/"))
+(add-to-list 'load-path (concat cedet-root-path "contrib"))
 
 ;; Enable EDE (Project Management) features
-(global-ede-mode 1)
+(global-ede-mode t)
+(ede-enable-generic-projects)
 
-;; Enabling Semantic (code-parsing, smart completion) features
-;; Select one of the following:
+;; select which submodes we want to activate
+(add-to-list 'semantic-default-submodes 'global-semantic-mru-bookmark-mode)
+(add-to-list 'semantic-default-submodes 'global-semanticdb-minor-mode)
+(add-to-list 'semantic-default-submodes 'global-semantic-idle-scheduler-mode)
+(add-to-list 'semantic-default-submodes 'global-semantic-stickyfunc-mode)
+(add-to-list 'semantic-default-submodes 'global-semantic-highlight-func-mode)
+(add-to-list 'semantic-default-submodes 'global-semanticdb-minor-mode)
 
-;; * This enables the database and idle reparse engines
-;;(semantic-load-enable-minimum-features)
-
-;; * This enables some tools useful for coding, such as summary mode
-;;   imenu support, and the semantic navigator
-;;(semantic-load-enable-code-helpers)
-
-;; * This enables even more coding tools such as intellisense mode
-;;   decoration mode, and stickyfunc mode (plus regular code helpers)
-(semantic-load-enable-gaudy-code-helpers)
+;; turn on sematic mode
+(semantic-mode 1)
 
 ;; complitition stuff
-(require 'semantic-ia)
-
-;; gcc setup
-(require 'semantic-gcc)
+(require 'semantic/ia)
 
 ;; Enable SRecode (Template management) minor-mode.
-(global-srecode-minor-mode 1)
+;;(global-srecode-minor-mode 1)
+
+(require 'semantic/bovine/gcc)
+
+(semanticdb-enable-gnu-global-databases 'c-mode t)
+(semanticdb-enable-gnu-global-databases 'c++-mode t)
+ 
+(setq stl-base-dir "/opt/local/include/gcc44/c++")
 
 (semantic-add-system-include "/usr/local/include" 'c++-mode)
 (semantic-add-system-include "/opt/local/include" 'c++-mode)
-(setq stl-base-dir "/opt/local/include/gcc44/c++")
 (semantic-add-system-include stl-base-dir 'c++-mode)
+
+;; load contrib library
+(require 'eassist)
 
 ;; ;;and ecb
 ;; (add-to-list 'load-path "/home/ai/work/emacs-libs/ecb-2.40")

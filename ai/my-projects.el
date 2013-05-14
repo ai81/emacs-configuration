@@ -11,7 +11,7 @@
                            ("gui" . "~/gui/DrWebGUI_Unix/")
                            ("gui-new" . "~/gui/DrWebGUI_Unix_new/")
 
-                           ("mobileapps" . "~/svn/arcadia/mobileapp-version/arcadia/")
+                           ("appsearch" . "~/svn/arcadia/mobileapp-version/arcadia/")
                            ("arcadia-trunk" . "~/svn/arcadia/trunk/arcadia/")
                            ("rabota-arcadia" . "~/svn/arcadia/rabota/arcadia/")
                            ("review" . "~/review/")
@@ -94,7 +94,7 @@
         (file-list-cache  "~/svn/arcadia/trunk/arcadia/files")
         (open-files-cache "~/svn/arcadia/trunk/arcadia/open-files")
         (vcs              svn)
-        (compile-cmd      "cd ~/svn/arcadia/trunk/release; make -j8 -k; cd -")
+        (compile-cmd      "cd ~/svn/arcadia/trunk/release; make -j4 -k; cd -")
         (ack-args         "--flush")
         (startup-hook     nil)
         (shutdown-hook    nil)))
@@ -109,7 +109,7 @@
         (file-list-cache  "~/svn/arcadia/rabota/files")
         (open-files-cache "~/svn/arcadia/rabota/open-files")
         (vcs              svn)
-        (compile-cmd      "cd ~/svn/arcadia/rabota/release; make -j8 -k; cd -")
+        (compile-cmd      "cd ~/svn/arcadia/rabota/release; make -j4 -k; cd -")
         (ack-args         "--flush")
         (startup-hook     nil)
         (shutdown-hook    nil)))
@@ -124,8 +124,23 @@
         (file-list-cache  "~/review/files")
         (open-files-cache "~/review/open-files")
         (vcs              git)
-        (compile-cmd      "cd ~/review/release; make -j8 -k; cd -")
+        (compile-cmd      "cd ~/review/release; make -j4 -k; cd -")
         (ack-args         "--flush")
         (startup-hook     nil)
         (shutdown-hook    nil)))
 
+
+(project-def "webapps"
+      '((basedir          "~/svn/arcadia/mobileapp-version/arcadia")
+        (src-patterns     ("*.H" "*.C" "*.h" "*.c" "*.cxx" "*.cpp" "*.hpp" "*.hh"))
+        (ignore-patterns  ("*cvs*" "*.png" "*.map" "*.md5" "*.html" "*~" 
+                            "*.Po" "*.Tpo" "*.supp" "ChangeLog" "*.o" "files"
+                            "*.a" "Entries" "Makefile" "basesearch"))
+        (tags-file        "~/svn/arcadia/mobileapp-version/arcadia/web-TAGS")
+        (file-list-cache  "~/svn/arcadia/mobileapp-version/arcadia/web-files")
+        (open-files-cache "~/svn/arcadia/mobileapp-version/arcadia/web-open-files")
+        (vcs              svn)
+        (compile-cmd      "cd ~/svn/arcadia/mobileapp-version/web-release; make -j4 -k; cd -")
+        (ack-args         "--flush")
+        (startup-hook     nil)
+        (shutdown-hook    nil)))
